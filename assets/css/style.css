@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;400&family=Roboto:ital,wght@1,100&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+}
+
+body {
+    display: flex; /* agar element didalamnya dapat diatur secara fleksibel */
+    /* agar konten didalamnya rata tengah sesuai dengan sumbu X (horizontal) */
+    align-items: center; 
+    /* agar konten didalamnya rata tengah sesuai dengan sumbu Y (vertikal) */
+    justify-content: center; 
+    height: 100vh; /* untuk memaksimalkan tinggi layar sehingga full 1 layar*/
+}
+
+.avatar{
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    border-radius: 50%;
+    background-image: url(../images/q.jpg);
+}
+
+.container{
+    background-color: coral;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 20px;
+    align-items: center; 
+    border-radius: 10px;
+}
+
+h3{
+    color: aliceblue;
+}
+
+.item{
+    background-color:cornsilk;
+    padding: 1rem 10rem;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.item a{
+    text-decoration: none;
+    color:darkred;
+    font-size: 1.2rem;
+}
+
+.item:hover{
+    background-color: crimson;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
+
+    .item {
+        padding: 1rem 3rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
